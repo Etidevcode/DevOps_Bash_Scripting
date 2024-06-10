@@ -1,0 +1,17 @@
+[root@scriptbox ~]# cd /opt/scripts/
+[root@scriptbox scripts]# ls
+
+[root@scriptbox scripts]# vim 7_userInput.sh
+[root@scriptbox scripts]# chmod +x 7_userInput.sh
+[root@scriptbox scripts]# ./7_userInput.sh
+Enter your skills:
+CloudComputing
+Your CloudComputing skill is in high Demand in the IT Industry.
+Username: Etienne
+Password:
+Login Successfull: Welcome USER Etienne,
+
+
+[root@scriptbox scripts]# cat 7_userInput.sh
+
+[root@scriptbox scripts]#

@@ -1,0 +1,25 @@
+[root@scriptbox scripts]# clear
+[root@scriptbox scripts]# SKILL="DevOps"
+
+[root@scriptbox scripts]# echo $SKILL
+DevOps
+
+[root@scriptbox scripts]# SKILL='DevOps'
+[root@scriptbox scripts]# echo $SKILL
+DevOps
+
+[root@scriptbox scripts]# echo "I have got $SKILL skill."
+I have got DevOps skill.
+
+[root@scriptbox scripts]# echo 'I have got $SKILL skill.'
+I have got $SKILL skill.
+
+[root@scriptbox scripts]# VIRUS="covid19"
+[root@scriptbox scripts]# echo "Due to $VIRUS virus company have lost $9 million."
+Due to covid19 virus company have lost  million.
+
+[root@scriptbox scripts]# echo 'Due to $VIRUS virus company have lost $9 million.'
+Due to $VIRUS virus company have lost $9 million.
+
+[root@scriptbox scripts]# echo "Due to $VIRUS virus company have lost \$9 million."
+Due to covid19 virus company have lost $9 million.

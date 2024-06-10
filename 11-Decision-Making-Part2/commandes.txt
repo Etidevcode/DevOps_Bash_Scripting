@@ -1,0 +1,26 @@
+[root@scriptbox scripts]# cp 8if1.sh 9_if1.sh
+[root@scriptbox scripts]# vim 9_if1.sh
+[root@scriptbox scripts]# chmod +x 9_if1.sh
+[root@scriptbox scripts]# ./9_if1.sh
+
+[root@scriptbox scripts]# clear
+[root@scriptbox scripts]# ip addr show
+
+[root@scriptbox scripts]# ip addr show | grep -v LOOPBACK
+
+[root@scriptbox scripts]# ip addr show | grep -v LOOPBACK | grep -ic mtu        
+[root@scriptbox scripts]# ip addr show | grep -v LOOPBACK | grep -ic mtu        
+[root@scriptbox scripts]# vim 9_ifelif.sh
+[root@scriptbox scripts]# chmod +x 9_ifelif.sh
+[root@scriptbox scripts]# ./9_ifelif.sh
+
+
+[root@scriptbox scripts]# mv 9_ifelif.sh 10_ifelif.sh
+[root@scriptbox scripts]# ls
+
+[root@scriptbox scripts]# ./10_ifelif.sh
+
+
+[root@scriptbox scripts]# cat 10_ifelif.sh
+
+[root@scriptbox scripts]#

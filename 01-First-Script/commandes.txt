@@ -1,0 +1,35 @@
+
+$ vagrant up scriptbox
+
+[vagrant@scriptbox ~]$ sudo -i
+[root@scriptbox ~]# vi /etc/hostname
+[root@scriptbox ~]# logout
+[vagrant@scriptbox ~]$ sudo -i
+[root@scriptbox ~]# hostname scriptbox
+[root@scriptbox ~]# logout
+[vagrant@scriptbox ~]$ logout
+
+
+$ vagrant ssh scriptbox
+[vagrant@scriptbox ~]$ hostname
+[vagrant@scriptbox ~]$ sudo -i
+[root@scriptbox ~]# mkdir /opt/scripts
+[root@scriptbox ~]# cd /opt/scripts
+[root@scriptbox scripts]# ls
+[root@scriptbox scripts]# vim
+-bash: vim: command not found
+[root@scriptbox scripts]# yum install vim -y
+
+[root@scriptbox scripts]# vim firstscript.sh
+[root@scriptbox scripts]# ./firstscript.sh
+-bash: ./firstscript.sh: Permission denied
+[root@scriptbox scripts]# ls -l
+[root@scriptbox scripts]# chmod +x firstscript.sh
+[root@scriptbox scripts]# ./firstscript.sh
+
+[root@scriptbox scripts]# vim firstscript.sh
+[root@scriptbox scripts]# ./firstscript.sh
+
+[root@scriptbox scripts]# /opt/scripts/firstscript.sh
+
+[root@scriptbox scripts]# vim firstscript.sh

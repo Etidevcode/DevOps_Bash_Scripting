@@ -1,0 +1,17 @@
+ vim 4_args.sh
+   66  chmod +x 4_args.sh
+   67  x="123"
+   68  echo $x
+   69  echo $y
+   70  ./4_args.sh
+   71  ./4_args.sh Linux
+   72  ./4_args.sh Linux AWS Ansible
+   73  ./4_args.sh Linux AWS Ansible Jenkins
+   74  ls
+   75  cp 3_vars_websetup.sh 5_args_websetup.sh
+   76  vim 5_args_websetup.sh
+   77  head 5_args_websetup.sh
+   78 
+   97  ./dismantle.sh
+   98  ./5_args_websetup.sh https://www.tooplate.com/zip-templates/2091_ziggy.zip 2091_ziggy
+   99  ifconfig

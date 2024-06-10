@@ -1,0 +1,8 @@
+[root@scriptbox scripts]# vim 15_while.sh
+[root@scriptbox scripts]# chmod +x 15_while.sh
+[root@scriptbox scripts]# ./15_while.sh
+
+[root@scriptbox scripts]# vim 15_while.sh
+[root@scriptbox scripts]# ./15_while.sh
+[root@scriptbox scripts]# cp 15_while.sh 16_while.sh
+[root@scriptbox scripts]# ./16_while.sh

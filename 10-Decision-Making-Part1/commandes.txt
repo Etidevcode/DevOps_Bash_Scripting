@@ -1,0 +1,16 @@
+[root@scriptbox scripts]# ls
+
+[root@scriptbox scripts]# vim 8if1.sh
+[root@scriptbox scripts]# chmod +x 8if1.sh
+[root@scriptbox scripts]# ./8if1.sh
+
+[root@scriptbox scripts]# ./8if1.sh
+
+[root@scriptbox scripts]# cp 8if1.sh 9_if1.sh
+[root@scriptbox scripts]# vim 9_if1.sh
+[root@scriptbox scripts]# chmod +x 9_if1.sh
+[root@scriptbox scripts]# ./9_if1.sh
+
+[root@scriptbox scripts]# ./9_if1.sh
+
+[root@scriptbox scripts]#

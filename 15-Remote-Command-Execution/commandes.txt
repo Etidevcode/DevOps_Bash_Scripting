@@ -1,0 +1,94 @@
+$ cd /c/vagrant-vms/DevOps_Bash_Scripting/BashScripts/
+
+$ cat Vagrantfile
+$ vagrant up
+
+$ vagrant ssh web01
+
+[vagrant@web01 ~]$ sudo -i
+[root@web01 ~]# vi /etc/hostname
+[root@web01 ~]# hostname web01
+[root@web01 ~]# logout
+[vagrant@web01 ~]$ logout
+
+
+$ vagrant ssh web02
+
+[vagrant@web02 ~]$ sudo -i
+[root@web02 ~]# vi /etc/hostname
+[root@web02 ~]# hostname web02
+[root@web02 ~]# logout
+[vagrant@web02 ~]$ logout
+
+$ vagrant reload web03
+
+$ vagrant ssh web03
+
+vagrant@web03:~$ sudo -i
+root@web03:~# vim /etc/hostname
+root@web03:~# hostname web03
+root@web03:~# logout
+vagrant@web03:~$ logout
+
+
+$ cat Vagrantfile
+
+$ vagrant ssh scriptbox
+[vagrant@scriptbox ~]$ sudo -i
+[root@scriptbox ~]# vim /etc/hostname
+[root@scriptbox ~]# vim /etc/hosts
+[root@scriptbox ~]# ping web01
+[root@scriptbox ~]# ping web02
+
+[root@scriptbox ~]# ssh vagrant@web01
+[vagrant@web01 ~]$ hostname
+web01
+[vagrant@web01 ~]$ logout
+
+[root@scriptbox ~]# ssh vagrant@web01
+
+[vagrant@web01 ~]$ sudo -i
+[root@web01 ~]# useradd devops
+[root@web01 ~]# passwd devops
+
+[root@web01 ~]# visudo
+
+[root@web01 ~]# visudo
+
+[root@web01 ~]# exit
+[vagrant@web01 ~]$ exit
+
+[root@scriptbox ~]# ssh vagrant@web02
+[vagrant@web02 ~]$ sudo -i
+[root@web02 ~]# useradd devops
+[root@web02 ~]# passwd devops
+[root@web02 ~]# visudo
+[root@web02 ~]# logout
+[vagrant@web02 ~]$ logout
+[root@scriptbox ~]# ssh vagrant@web03
+[root@scriptbox ~]# logout
+[vagrant@scriptbox ~]$ logout
+
+
+$ vagrant ssh web03
+vagrant@web03:~$ sudo -i
+root@web03:~# vim /etc/ssh/sshd_config
+root@web03:~# systemctl restart ssh
+root@web03:~# logout
+vagrant@web03:~$ logout
+
+$ vagrant ssh scriptbox
+[vagrant@scriptbox ~]$ sudo -i
+[root@scriptbox ~]# ssh vagrant@web03
+
+
+vagrant@web03:~$ sudo -i
+root@web03:~# adduser devops
+
+root@web03:~# export EDITOR=vim
+root@web03:~# visudo
+root@web03:~# logout
+vagrant@web03:~$ logout
+[root@scriptbox ~]# ssh devops@web01 uptime
+
+

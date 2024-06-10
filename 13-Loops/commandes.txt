@@ -1,0 +1,13 @@
+[vagrant@scriptbox ~]$ sudo -i
+[root@scriptbox ~]# cd /opt/scripts
+[root@scriptbox scripts]# ls
+
+[root@scriptbox scripts]# vim 13_for.sh
+[root@scriptbox scripts]# chmod +x 13_for.sh
+[root@scriptbox scripts]# ./13_for.sh
+
+[root@scriptbox scripts]# vim 13_for.sh
+[root@scriptbox scripts]# vim 14_for.sh
+[root@scriptbox scripts]# chmod +x 14_for.sh
+[root@scriptbox scripts]# ./14_for.sh
+

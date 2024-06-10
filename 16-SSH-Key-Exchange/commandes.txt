@@ -1,0 +1,26 @@
+[root@scriptbox ~]# ssh-keygen
+
+[root@scriptbox ~]# ssh-copy-id devops@web01
+
+
+[root@scriptbox ~]# ssh-copy-id devops@web02
+
+
+[root@scriptbox ~]# ssh-copy-id devops@web03
+
+
+[root@scriptbox ~]# ssh devops@web01 uptime
+
+[root@scriptbox ~]# pwd
+
+[root@scriptbox ~]# ls -a
+
+[root@scriptbox ~]# ls .ssh/
+
+[root@scriptbox ~]# ssh -i .ssh/id_rsa devops@web01 uptime
+
+[root@scriptbox ~]# cat .ssh/id_rsa
+
+[root@scriptbox ~]# cat .ssh/id_rsa.pub
+
+[root@scriptbox ~]# cat .ssh/id_rsa

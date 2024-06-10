@@ -1,0 +1,48 @@
+
+[root@scriptbox scripts]# clear
+[root@scriptbox scripts]# freeee -m
+-bash: freeee: command not found
+[root@scriptbox scripts]# echo $?
+127
+[root@scriptbox scripts]# free -m
+
+[root@scriptbox scripts]# echo $?
+0
+[root@scriptbox scripts]# systemctl status httpd
+
+[root@scriptbox scripts]# cat /var/run/httpd/ht
+
+[root@scriptbox scripts]# cat /var/run/httpd/httpd.pid
+
+[root@scriptbox scripts]# systemctl stop httpd
+[root@scriptbox scripts]# cat /var/run/httpd/httpd.pid
+
+[root@scriptbox scripts]# echo $?
+
+[root@scriptbox scripts]# systemctl start httpd
+[root@scriptbox scripts]# cat /var/run/httpd/httpd.pid
+
+[root@scriptbox scripts]# ls
+
+[root@scriptbox scripts]# vim 11_monit.sh
+[root@scriptbox scripts]# chmod +x 11_monit.sh
+
+[root@scriptbox scripts]# ./11_monit.sh
+
+
+[root@scriptbox scripts]# systemctl stop httpd
+[root@scriptbox scripts]# ./11_monit.sh
+
+
+[root@scriptbox scripts]# /opt/scripts/11_monit.sh
+
+
+[root@scriptbox scripts]# crontab -e
+
+[root@scriptbox scripts]# systemctl stop httpd
+[root@scriptbox scripts]# ls /var/log/monit_httpd.log
+
+[root@scriptbox scripts]# cat /var/log/monit_httpd.log
+
+[root@scriptbox scripts]# systemctl stop httpd
+[root@scriptbox scripts]# tail -f /var/log/monit_httpd. log

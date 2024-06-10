@@ -1,0 +1,34 @@
+
+[root@scriptbox /]# ls /opt/scripts
+firstscript.sh  websetup.sh
+[root@scriptbox /]# SKILL="DevOps"
+[root@scriptbox /]# echo $SKILL
+
+[root@scriptbox /]# echo SKILL
+
+[root@scriptbox /]# PACKAGE="httpd wget unzip"
+[root@scriptbox /]# yum install $PACKAGE -y
+
+[root@scriptbox /]# cd /opt/scripts/
+[root@scriptbox scripts]# ls
+firstscript.sh  websetup.sh
+[root@scriptbox scripts]# mv firstscript.sh 1_firstscript.sh
+[root@scriptbox scripts]# mv websetup.sh 2_websetup.sh
+[root@scriptbox scripts]# ls
+1_firstscript.sh  2_websetup.sh
+[root@scriptbox scripts]# cp 2_websetup.sh 3_vars_websetup.sh
+[root@scriptbox scripts]# ls
+1_firstscript.sh  2_websetup.sh  3_vars_websetup.sh
+[root@scriptbox scripts]# vim 3_vars_websetup.sh
+[root@scriptbox scripts]# cat 3_vars_websetup.sh
+
+[root@scriptbox scripts]# vim dismantle.sh
+[root@scriptbox scripts]# chmod +x dismantle.sh
+[root@scriptbox scripts]# ./dismantle.sh
+
+[root@scriptbox scripts]# ls
+1_firstscript.sh  2_websetup.sh  3_vars_websetup.sh  dismantle.sh
+[root@scriptbox scripts]# ./3_vars_websetup.sh
+[root@scriptbox scripts]# ip add show
+[root@scriptbox scripts]# cat dismantle.sh
+[root@scriptbox scripts]#

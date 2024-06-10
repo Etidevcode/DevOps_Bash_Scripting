@@ -1,0 +1,8 @@
+
+[root@scriptbox /]# ls /opt/scripts
+firstscript.sh
+[root@scriptbox /]# vim /opt/scripts/websetup.sh
+[root@scriptbox /]# chmod +x /opt/scripts/websetup.sh
+[root@scriptbox /]# /opt/scripts/websetup.sh
+[root@scriptbox /]# ip addr show
+

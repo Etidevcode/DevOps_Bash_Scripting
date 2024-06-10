@@ -1,0 +1,26 @@
+[root@scriptbox scripts]# free -m
+              total        used        free      shared  buff/cache   available
+Mem:            990         135         238           6         616         703
+Swap:          1023           0        1023
+[root@scriptbox scripts]# echo $?
+0
+[root@scriptbox scripts]# freeeeee -m
+-bash: freeeeee: command not found
+[root@scriptbox scripts]# echo $?
+127
+[root@scriptbox scripts]# free  -msdasdasdasd
+free: seconds argument `dasdasdasd' failed
+[root@scriptbox scripts]# echo $?
+1
+[root@scriptbox scripts]# echo $USER
+root
+[root@scriptbox scripts]# echo $HOSTNAME
+scriptbox
+[root@scriptbox scripts]# echo $RANDOM
+6914
+[root@scriptbox scripts]# echo $RANDOM
+16025
+[root@scriptbox scripts]# echo $RANDOM
+24590
+[root@scriptbox scripts]# echo $RANDOM
+21291

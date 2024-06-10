@@ -1,0 +1,87 @@
+[root@scriptbox scripts]# SEASON="Monsoon"
+[root@scriptbox scripts]# echo $SEASON
+Monsoon
+[root@scriptbox scripts]# echo SEASON
+SEASON
+[root@scriptbox scripts]# exit
+logout
+[vagrant@scriptbox ~]$ sudo -i
+[root@scriptbox ~]# echo $SEASON
+
+[root@scriptbox ~]# cd /opt/scripts
+[root@scriptbox scripts]# ls
+1_firstscript.sh  3_vars_websetup.sh  5_args_websetup.sh  dismantle.sh
+2_websetup.sh     4_args.sh           6_command_subs.sh
+[root@scriptbox scripts]# vim testvars.sh
+[root@scriptbox scripts]# chmod +x testvars.sh
+# .bashrc
+[root@scriptbox scripts]# SEASON="Monsoon"
+[root@scriptbox scripts]# echo $SEASON
+Monsoon
+[root@scriptbox scripts]# ./testvars.sh
+The  season is more thna expected, this time.
+[root@scriptbox scripts]# vim testvars.sh
+[root@scriptbox scripts]# ./testvars.sh
+The  season is more than expected, this time.
+[root@scriptbox scripts]# export SEASON
+[root@scriptbox scripts]# ./testvars.sh
+The Monsoon season is more than expected, this time.
+[root@scriptbox scripts]# exit
+logout
+[vagrant@scriptbox ~]$ sudo -i
+[root@scriptbox ~]# echo $SEASON
+
+[root@scriptbox ~]# ls
+anaconda-ks.cfg  original-ks.cfg
+[root@scriptbox ~]# ls -a
+# Current threshold for system reserved uid/gids is 200
+.   anaconda-ks.cfg  .bash_logout   .bashrc  original-ks.cfg  .tcshrc
+..  .bash_history    .bash_profile  .cshrc   .pki             .viminfo
+[root@scriptbox ~]# source .bashrc
+[root@scriptbox ~]# vi .bashrc
+[root@scriptbox ~]# echo $SEASON
+
+[root@scriptbox ~]# exit
+logout
+[vagrant@scriptbox ~]$ sudo -i
+[root@scriptbox ~]# echo $SEASON
+Monsoon
+[root@scriptbox ~]# ls -a
+.   anaconda-ks.cfg  .bash_logout   .bashrc  original-ks.cfg  .tcshrc
+..  .bash_history    .bash_profile  .cshrc   .pki             .viminfo
+[root@scriptbox ~]# exit
+logout
+[vagrant@scriptbox ~]$ whoami
+vagrant
+[vagrant@scriptbox ~]$ ls -a
+.   .ansible       .bash_logout   .bashrc  .vbox_version
+..  .bash_history  .bash_profile  .ssh
+[vagrant@scriptbox ~]$ sudo -i
+[root@scriptbox ~]# vim /etc/profile
+[root@scriptbox ~]# ls -a
+.   anaconda-ks.cfg  .bash_logout   .bashrc  original-ks.cfg  .tcshrc
+..  .bash_history    .bash_profile  .cshrc   .pki             .viminfo
+[root@scriptbox ~]# exit
+logout
+[vagrant@scriptbox ~]$ exit
+logout
+
+
+$ vagrant ssh scriptbox
+Last login: Mon Jun  3 10:42:21 2024 from 10.0.2.2
+[vagrant@scriptbox ~]$ echo $SEASON
+Winter
+[vagrant@scriptbox ~]$ ls /etc/profile
+/etc/profile
+[vagrant@scriptbox ~]$ sudo -i
+[root@scriptbox ~]# echo $SEASON
+Monsoon
+[root@scriptbox ~]# ls -a
+.   anaconda-ks.cfg  .bash_logout   .bashrc  original-ks.cfg  .tcshrc
+..  .bash_history    .bash_profile  .cshrc   .pki             .viminfo
+[root@scriptbox ~]# ls /etc/profile
+/etc/profile
+[root@scriptbox ~]# ls -a
+.   anaconda-ks.cfg  .bash_logout   .bashrc  original-ks.cfg  .tcshrc
+..  .bash_history    .bash_profile  .cshrc   .pki             .viminfo
+[root@scriptbox ~]#

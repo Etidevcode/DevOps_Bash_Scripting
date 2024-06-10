@@ -1,0 +1,33 @@
+[root@scriptbox scripts]# uptime
+
+[root@scriptbox scripts]# UP="uptime"
+[root@scriptbox scripts]# echo $UP
+
+[root@scriptbox scripts]# UP='uptime'
+[root@scriptbox scripts]# echo $UP
+
+[root@scriptbox scripts]# UP=`uptime`
+[root@scriptbox scripts]# echo $UP
+
+[root@scriptbox scripts]# w
+
+[root@scriptbox scripts]# who
+
+
+[root@scriptbox scripts]# CURRENT_USER=$(who)
+
+[root@scriptbox scripts]# echo $CURRENT_USER
+
+[root@scriptbox scripts]# free -m
+
+[root@scriptbox scripts]# free -m | grep Mem | awk ' {print $4}'
+237
+[root@scriptbox scripts]# FREE_RAM=`free -m | grep Mem | awk ' {print $4}'`
+[root@scriptbox scripts]# echo "Free RAM is $FREE_RAM mb."
+
+[root@scriptbox scripts]# vim 6_command_subs.sh
+[root@scriptbox scripts]# ./6_command_subs.sh
+-bash: ./6_command_subs.sh: Permission denied
+[root@scriptbox scripts]# chmod +x 6_command_subs.sh
+[root@scriptbox scripts]# ./6_command_subs.sh
+

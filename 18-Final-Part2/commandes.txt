@@ -1,0 +1,55 @@
+[root@scriptbox ~]# clear
+
+[root@scriptbox ~]# cd /opt/scripts/
+[root@scriptbox scripts]# ls
+
+[root@scriptbox scripts]# mkdir remote_websetup
+[root@scriptbox scripts]# cd remote_websetup/
+[root@scriptbox remote_websetup]# ls
+[root@scriptbox remote_websetup]# for host in `cat remhosts`; do ssh devops@$host hostname;doneweb01
+
+[root@scriptbox remote_websetup]# for host in `cat remhosts`; do echo $host;done
+
+[root@scriptbox remote_websetup]# for host in `cat remhosts`; do ssh devops@$host uptime;done
+
+[root@scriptbox remote_websetup]# for host in `cat remhosts`; do ssh devops@$host sudo yum install git -y;done>>> /etc/sudoers: syntax error near line 101 <<<
+
+[root@scriptbox remote_websetup]# ls
+
+[root@scriptbox remote_websetup]# ls ../
+
+[root@scriptbox remote_websetup]# cp ../3_vars_websetup.sh .
+[root@scriptbox remote_websetup]# ls
+
+[root@scriptbox remote_websetup]# mv 3_vars_websetup.sh multios_websetup.sh
+[root@scriptbox remote_websetup]# ls
+
+[root@scriptbox remote_websetup]# vim multios_websetup.sh
+[root@scriptbox remote_websetup]# cat multios_websetup.sh
+
+[root@scriptbox remote_websetup]# ls
+
+[root@scriptbox remote_websetup]# chmod +x multios_websetup.sh
+[root@scriptbox remote_websetup]# ./multios_websetup.sh
+
+[root@scriptbox remote_websetup]# ls
+
+[root@scriptbox remote_websetup]# echo "testfile" > testfile.txt
+[root@scriptbox remote_websetup]# ls
+
+[root@scriptbox remote_websetup]# scp testfile.txt devops@web01:/tmp/
+
+[root@scriptbox remote_websetup]# scp testfile.txt devops@web01:/root/
+
+[root@scriptbox remote_websetup]# scp -i ~/.ssh/id_rsa testfile.txt devops@web01:/home/devops
+
+[root@scriptbox remote_websetup]# vim webdeploy.sh
+[root@scriptbox remote_websetup]# chmod +x webdeploy.sh
+[root@scriptbox remote_websetup]# ./webdeploy.sh
+
+
+[root@scriptbox remote_websetup]# cat /etc/hosts
+
+[root@scriptbox remote_websetup]# ls
+
+[root@scriptbox remote_websetup]# cat remhosts
